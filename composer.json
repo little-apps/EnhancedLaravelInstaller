@@ -16,5 +16,12 @@
         "psr-4": {
             "LittleApps\\EnhancedLaravelInstaller\\": "src/"
         }
-    }
+    },
+	"extra": {
+        "laravel": {
+            "providers": [
+                "LittleApps\\EnhancedLaravelInstaller\\Providers\\LaravelInstallerServiceProvider"
+            ]
+        }
+	}
 }
