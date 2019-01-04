@@ -11,5 +11,10 @@
             "name": "Nick H",
             "email": "nick@little-apps.com"
         }
-    ]
+    ],
+	"autoload": {
+        "psr-4": {
+            "LittleApps\\EnhancedLaravelInstaller\\": "src/"
+        }
+    }
 }
