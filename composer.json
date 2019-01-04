@@ -1,0 +1,15 @@
+{
+    "name": "little-apps/enhanced-laravel-installer",
+    "description": "Enhanced Laravel Installer is an improved version based off of Laravel Installer by @rashidlaasri",
+    "require": {
+        "php": ">=7.1.3",
+        "rachidlaasri/laravel-installer": "^4.0"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Nick H",
+            "email": "nick@little-apps.com"
+        }
+    ]
+}
