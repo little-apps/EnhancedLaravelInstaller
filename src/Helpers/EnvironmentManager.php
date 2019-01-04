@@ -24,21 +24,6 @@ class EnvironmentManager {
 		$this->envExamplePath = App::environmentPath().DIRECTORY_SEPARATOR.'.env.example';
 	}
 
-	/**
-     * Get the content of the .env file.
-     *
-     * @return string
-     */
-    public function getEnvContent()
-    {
-		try {
-			return Storage::disk('local')->get($this->envPath);
-		} catch (FileNotFoundException $e) {
-			//return Storage::disk('local')->get($this->envExamplePath);
-			return file_get_contents($this->envExamplePath);
-		}
-    }
-
     /**
      * Get the the .env file path.
      *
