@@ -26,5 +26,17 @@ class LaravelInstallerServiceProvider extends ServiceProvider
 
 			return new EnvironmentController($envController, $envManager);
 		});
+
+		$this->publishes([
+			__DIR__.'/../config/installer.php' => config_path('installer.php')
+		], 'enhanced-laravel-installer');
+
+		$this->publishes([
+            __DIR__.'/../lang' => base_path('resources/lang'),
+		], 'enhanced-laravel-installer');
+		
+		$this->publishes([
+            __DIR__.'/../views' => base_path('resources/views/vendor/installer'),
+        ], 'enhanced-laravel-installer');
     }
 }
