@@ -60,7 +60,7 @@ class EnvironmentController extends Controller {
 			// We just need to pass the container (and the errors)
 			return 
 				view('vendor.installer.environment-wizard')
-					->with(['container' => $container->setErrors($e->errors())]);
+					->with(['container' => $container->setErrors($e->validator->errors())]);
 		}
 
 		event(new EnvironmentSaving($container, $request));

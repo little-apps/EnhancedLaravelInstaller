@@ -3,6 +3,7 @@
 namespace LittleApps\EnhancedLaravelInstaller\Environment;
 
 use Illuminate\Support\Arr;
+use Illuminate\Support\MessageBag;
 use LittleApps\EnhancedLaravelInstaller\Environment\Controls\Control;
 
 class Container extends Control {
@@ -19,10 +20,10 @@ class Container extends Control {
 	/**
 	 * Sets errors to be shared across all views
 	 *
-	 * @param array $errors
+	 * @param MessageBag $errors
 	 * @return static
 	 */
-	public function setErrors(array $errors) {
+	public function setErrors(MessageBag $errors) {
 		// We can't rely on the Illuminate\View\Middleware\ShareErrorsFromSession middleware.
 		// This is a package and it is unknown if the Laravel project has sessions configured.
 		view()->share('errors', $errors);
