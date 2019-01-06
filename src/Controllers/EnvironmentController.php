@@ -54,14 +54,13 @@ class EnvironmentController extends Controller {
 		$messages['environment_custom.required_if'] = __('installer_messages.environment.wizard.form.name_required');
 
 		try {
-			//$request->validate($rules->all(), $messages->all());
+			$request->validate($rules->all(), $messages->all());
 		} catch (ValidationException $e) {
 			// LaravelInstaller does validation itself so it can pass $envConfig to the view, but $envConfig doesn't exist :S
 			// We just need to pass the container (and the errors)
 			return 
 				view('vendor.installer.environment-wizard')
-					->with(compact('container'))
-					->withErrors($e->errors(), $e->errorBag);
+					->with(['container' => $container->setErrors($e->errors())]);
 		}
 
 		event(new EnvironmentSaving($container, $request));

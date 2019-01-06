@@ -10,7 +10,7 @@
 @endsection
 
 @section('container')
-    {!! $container->makeView($errors ?? []) !!}
+    {!! $container->makeView() !!}
 @endsection
 
 @section('scripts')

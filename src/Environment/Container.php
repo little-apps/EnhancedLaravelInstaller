@@ -17,18 +17,17 @@ class Container extends Control {
 	}
 
 	/**
-	 * Makes view and creates global errors for all controls to access.
+	 * Sets errors to be shared across all views
 	 *
 	 * @param array $errors
-	 * @return Illuminate\Contracts\View\View
+	 * @return static
 	 */
-	public function makeView(array $errors) {
-		// Share errors across all views
+	public function setErrors(array $errors) {
 		// We can't rely on the Illuminate\View\Middleware\ShareErrorsFromSession middleware.
 		// This is a package and it is unknown if the Laravel project has sessions configured.
 		view()->share('errors', $errors);
 
-		return parent::makeView();
+		return $this;
 	}
 
 	/**
