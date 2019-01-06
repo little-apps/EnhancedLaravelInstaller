@@ -105,10 +105,16 @@ return [
 				],
 				'app_key' => [
 					'envName' => 'APP_KEY',
-					'type' => 'app_key',
+					'type' => 'text',
 					'label' => 'installer_messages.environment.wizard.form.app_key_label',
-					'rules' => 'required|string|max:50'
-				], 
+					'placeholder' => '(Automatically generated)',
+					'value' => '',
+					'extras' => [
+						'input' => [
+							'readonly' => 'readonly'
+						]
+					]
+				],
 				'app_debug' => [
 					'envName' => 'APP_DEBUG',
 					'type' => 'radios',

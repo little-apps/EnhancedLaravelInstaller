@@ -160,17 +160,6 @@ class Factory {
 	}
 
 	/**
-	 * Creates a AppKey control
-	 *
-	 * @param string $id ID of control (does not have to be unique)
-	 * @param array $params Parameters for control
-	 * @return LittleApps\EnhancedLaravelInstaller\Environment\Controls\AppKey
-	 */
-	protected function createAppKeyControl($id, $params) {
-		return $this->app->makeWith(Controls\AppKey::class, compact('id', 'params'));
-	}
-
-	/**
 	 * Makes Controls from an array of params
 	 *
 	 * @param mixed $controls An array control parameters
