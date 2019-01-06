@@ -1,1 +1,1 @@
-{!! Form::button($control->getButtonContent(), $control->getButtonExtras()) !!}
+{!! Form::button($control->getButtonContent(), ['class' => 'button'] + $control->getButtonExtras()) !!}
