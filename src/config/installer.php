@@ -108,7 +108,7 @@ return [
 					'type' => 'text',
 					'label' => 'installer_messages.environment.wizard.form.app_key_label',
 					'placeholder' => '(Automatically generated)',
-					'value' => '',
+					'default' => '',
 					'extras' => [
 						'input' => [
 							'readonly' => 'readonly'
@@ -153,7 +153,7 @@ return [
 					'envName' => 'APP_URL',
 					'type' => 'text',
 					'label' => 'installer_messages.environment.wizard.form.app_url_label',
-					'value' => 'http://localhost',
+					'default' => 'http://localhost',
 					'placeholder' => 'installer_messages.environment.wizard.form.app_url_placeholder',
 					'extras' => [
 						'input' => [
@@ -208,7 +208,7 @@ return [
 					'envName' => 'DB_HOST',
 					'type' => 'text',
 					'label' => 'installer_messages.environment.wizard.form.db_host_label',
-					'value' => '127.0.0.1',
+					'default' => '127.0.0.1',
 					'placeholder' => 'installer_messages.environment.wizard.form.db_host_placeholder',
 					'rules' => 'required|string|max:50'
 				],
@@ -216,7 +216,7 @@ return [
 					'envName' => 'DB_PORT',
 					'type' => 'text',
 					'label' => 'installer_messages.environment.wizard.form.db_port_label',
-					'value' => '3306',
+					'default' => '3306',
 					'placeholder' => 'installer_messages.environment.wizard.form.db_port_placeholder',
 					'extras' => [
 						'input' => [
@@ -287,7 +287,7 @@ return [
 									'title' => 'installer_messages.environment.wizard.form.app_tabs.more_info'
 								]
 							],
-							'value' => 'log',
+							'default' => 'log',
 							'placeholder' => 'installer_messages.environment.wizard.form.app_tabs.broadcasting_placeholder',
 							'rules' => 'required|string|max:50'
 						],
@@ -302,7 +302,7 @@ return [
 									'title' => 'installer_messages.environment.wizard.form.app_tabs.more_info'
 								]
 							],
-							'value' => 'file',
+							'default' => 'file',
 							'placeholder' => 'installer_messages.environment.wizard.form.app_tabs.cache_placeholder',
 							'rules' => 'required|string|max:50'
 						],
@@ -317,7 +317,7 @@ return [
 									'title' => 'installer_messages.environment.wizard.form.app_tabs.more_info'
 								]
 							],
-							'value' => 'file',
+							'default' => 'file',
 							'placeholder' => 'installer_messages.environment.wizard.form.app_tabs.session_placeholder',
 							'rules' => 'required|string|max:50'
 						],
@@ -332,7 +332,7 @@ return [
 									'title' => 'installer_messages.environment.wizard.form.app_tabs.more_info'
 								]
 							],
-							'value' => 'sync',
+							'default' => 'sync',
 							'placeholder' => 'installer_messages.environment.wizard.form.app_tabs.queue_placeholder',
 							'rules' => 'required|string|max:50'
 						],
@@ -353,7 +353,7 @@ return [
 									'title' => 'installer_messages.environment.wizard.form.app_tabs.more_info'
 								]
 							],
-							'value' => '127.0.0.1',
+							'default' => '127.0.0.1',
 							'placeholder' => 'installer_messages.environment.wizard.form.app_tabs.redis_host',
 							'rules' => 'required|string|max:50'
 						],
@@ -368,7 +368,7 @@ return [
 							'envName' => 'REDIS_PORT',
 							'type' => 'text',
 							'label' => 'installer_messages.environment.wizard.form.app_tabs.redis_port',
-							'value' => '6379',
+							'default' => '6379',
 							'placeholder' => 'installer_messages.environment.wizard.form.app_tabs.redis_port',
 							'rules' => 'required|numeric',
 							'extras' => [
@@ -394,7 +394,7 @@ return [
 									'title' => 'installer_messages.environment.wizard.form.app_tabs.more_info'
 								]
 							],
-							'value' => 'smtp',
+							'default' => 'smtp',
 							'placeholder' => 'installer_messages.environment.wizard.form.app_tabs.mail_driver_placeholder',
 							'rules' => 'required|string|max:50'
 						],
@@ -402,7 +402,7 @@ return [
 							'envName' => 'MAIL_HOST',
 							'type' => 'text',
 							'label' => 'installer_messages.environment.wizard.form.app_tabs.mail_host_label',
-							'value' => 'smtp.mailtrap.io',
+							'default' => 'smtp.mailtrap.io',
 							'placeholder' => 'installer_messages.environment.wizard.form.app_tabs.mail_host_placeholder',
 							'rules' => 'required|string|max:50'
 						],
@@ -410,7 +410,7 @@ return [
 							'envName' => 'MAIL_PORT',
 							'type' => 'text',
 							'label' => 'installer_messages.environment.wizard.form.app_tabs.mail_port_label',
-							'value' => '2525',
+							'default' => '2525',
 							'placeholder' => 'installer_messages.environment.wizard.form.app_tabs.mail_port_placeholder',
 							'rules' => 'required|numeric',
 							'extras' => [
