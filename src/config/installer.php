@@ -123,11 +123,11 @@ return [
 					'controls' => [
 						'app_debug_true' => [
 							'label' => 'installer_messages.environment.wizard.form.app_debug_label_true',
-							'value' => true
+							'value' => 'true'
 						],
 						'app_debug_false' => [
 							'label' => 'installer_messages.environment.wizard.form.app_debug_label_false',
-							'value' => false
+							'value' => 'false'
 						]
 					],
 					'rules' => 'required|in:true,false'
