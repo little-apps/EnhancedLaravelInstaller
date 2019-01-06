@@ -37,7 +37,7 @@ class Container extends Control {
 	 * @param LittleApps\EnhancedLaravelInstaller\Environment\Controls\Control $parent
 	 * @return Illuminate\Support\Collection
 	 */
-	public function getEnvConfig($parent = null) {
+	public function getEnvConfig(Control $parent = null) {
 		$parent = $parent ?? $this;
 
 		$config = collect();
@@ -64,7 +64,7 @@ class Container extends Control {
 	 * @param LittleApps\EnhancedLaravelInstaller\Environment\Controls\Control $parent
 	 * @return array The first element the rules and second element any custom messages for validation errors
 	 */
-	public function getValidationRulesMessages($parent = null) {
+	public function getValidationRulesMessages(Control $parent = null) {
 		$parent = $parent ?? $this;
 
 		$rules = collect();
