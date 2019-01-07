@@ -355,14 +355,14 @@ return [
 							],
 							'default' => '127.0.0.1',
 							'placeholder' => 'installer_messages.environment.wizard.form.app_tabs.redis_host',
-							'rules' => 'required|string|max:50'
+							'rules' => 'string|max:50'
 						],
 						'redis_password' => [
 							'envName' => 'REDIS_PASSWORD',
 							'type' => 'password',
 							'label' => 'installer_messages.environment.wizard.form.app_tabs.redis_password',
 							'placeholder' => 'installer_messages.environment.wizard.form.app_tabs.redis_password',
-							'rules' => 'required|string|max:50'
+							'rules' => 'string|max:50'
 						],
 						'redis_port' => [
 							'envName' => 'REDIS_PORT',
@@ -370,7 +370,7 @@ return [
 							'label' => 'installer_messages.environment.wizard.form.app_tabs.redis_port',
 							'default' => '6379',
 							'placeholder' => 'installer_messages.environment.wizard.form.app_tabs.redis_port',
-							'rules' => 'required|numeric',
+							'rules' => 'numeric',
 							'extras' => [
 								'input' => [
 									'type' => 'number'
@@ -404,7 +404,7 @@ return [
 							'label' => 'installer_messages.environment.wizard.form.app_tabs.mail_host_label',
 							'default' => 'smtp.mailtrap.io',
 							'placeholder' => 'installer_messages.environment.wizard.form.app_tabs.mail_host_placeholder',
-							'rules' => 'required|string|max:50'
+							'rules' => 'required_if:mail_driver,smtp|string|max:50'
 						],
 						'mail_port' => [
 							'envName' => 'MAIL_PORT',
@@ -412,7 +412,7 @@ return [
 							'label' => 'installer_messages.environment.wizard.form.app_tabs.mail_port_label',
 							'default' => '2525',
 							'placeholder' => 'installer_messages.environment.wizard.form.app_tabs.mail_port_placeholder',
-							'rules' => 'required|numeric',
+							'rules' => 'required_if:mail_driver,smtp|numeric',
 							'extras' => [
 								'input' => [
 									'type' => 'number'
@@ -424,21 +424,21 @@ return [
 							'type' => 'text',
 							'label' => 'installer_messages.environment.wizard.form.app_tabs.mail_username_label',
 							'placeholder' => 'installer_messages.environment.wizard.form.app_tabs.mail_username_placeholder',
-							'rules' => 'required|string|max:50'
+							'rules' => 'required_if:mail_driver,smtp|string|max:50'
 						],
 						'mail_password' => [
 							'envName' => 'MAIL_PASSWORD',
 							'type' => 'password',
 							'label' => 'installer_messages.environment.wizard.form.app_tabs.mail_password_label',
 							'placeholder' => 'installer_messages.environment.wizard.form.app_tabs.mail_password_placeholder',
-							'rules' => 'required|string|max:50'
+							'rules' => 'required_if:mail_driver,smtp|string|max:50'
 						],
 						'mail_encryption' => [
 							'envName' => 'MAIL_ENCRYPTION',
 							'type' => 'text',
 							'label' => 'installer_messages.environment.wizard.form.app_tabs.mail_encryption_label',
 							'placeholder' => 'installer_messages.environment.wizard.form.app_tabs.mail_encryption_placeholder',
-							'rules' => 'required|string|max:50'
+							'rules' => 'required_if:mail_driver,smtp|string|max:50'
 						],
 					]
 				],
