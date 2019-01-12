@@ -1,3 +1,1 @@
-<div class="buttons">
-	{!! $control->renderControls() !!}
-</div>
+{!! Html::tag('div', $control->renderControls(), ['class' => 'buttons'] + $control->getDivExtras()) !!}

@@ -8,4 +8,8 @@ class Buttons extends Control {
 	public function getView() {
 		return view('vendor.installer.environment-wizard.buttons');
 	}
+
+	public function getDivExtras() {
+		return isset($this->extras['div']) ? $this->extras['div'] : [];
+	}
 }
