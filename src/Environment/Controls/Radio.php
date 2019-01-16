@@ -16,4 +16,8 @@ class Radio extends Option {
 	public function getView() {
 		return view('vendor.installer.environment-wizard.radio');
 	}
+
+	public function getRadioExtras() {
+		return isset($this->extras['radio']) ? $this->extras['radio'] : [];
+	}
 }
