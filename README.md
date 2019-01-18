@@ -52,3 +52,7 @@ php artisan vendor:publish --tag=laravelinstaller
 ```bash
 php artisan vendor:publish --tag=enhanced-laravel-installer --force
 ```
+
+## Configuration
+
+For information on the controls and how to configure them, please see [the wiki](https://github.com/little-apps/EnhancedLaravelInstaller/wiki) on GitHub.
