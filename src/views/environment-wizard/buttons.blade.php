@@ -1,1 +1,1 @@
-{!! Html::tag('div', $control->renderControls(), ['class' => 'buttons'] + $control->getDivExtras()) !!}
+{!! Html::tag('div', (string) $control->renderControls(), ['class' => 'buttons'] + $control->getDivExtras()) !!}
