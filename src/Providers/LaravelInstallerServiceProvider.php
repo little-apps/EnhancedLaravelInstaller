@@ -5,6 +5,8 @@ namespace LittleApps\EnhancedLaravelInstaller\Providers;
 use Illuminate\Support\ServiceProvider;
 use LittleApps\EnhancedLaravelInstaller\Controllers\EnvironmentController;
 use RachidLaasri\LaravelInstaller\Controllers\EnvironmentController as EnvironmentControllerBase;
+use LittleApps\EnhancedLaravelInstaller\Controllers\FinalController;
+use RachidLaasri\LaravelInstaller\Controllers\FinalController as FinalControllerBase;
 use LittleApps\EnhancedLaravelInstaller\Environment\Factory as EnvironmentFactory;
 use LittleApps\EnhancedLaravelInstaller\Helpers\EnvironmentManager;
 
@@ -25,6 +27,10 @@ class LaravelInstallerServiceProvider extends ServiceProvider
 			$envManager = $this->app->make(EnvironmentManager::class);
 
 			return new EnvironmentController($envController, $envManager);
+		});
+
+		$this->app->extend(FinalControllerBase::class, function ($finalController) {
+			return new FinalController($finalController);
 		});
 
 		$this->publishes([
